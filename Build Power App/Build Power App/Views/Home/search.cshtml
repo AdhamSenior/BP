@@ -1,0 +1,119 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+        <h2> Result of @ViewBag.text  from News</h2>
+            <!-- Posts
+            ============================================= -->
+            <div id="posts" class="small-thumbs">
+
+                @{
+                    foreach (var item in ViewBag.resultnews)
+                    {
+                        <div class="entry clearfix">
+                            <div class="entry-image">
+                                <a href="@item.Picture" data-lightbox="image"><img class="image_fade" src="@item.Picture" alt="Standard Post with Image"></a>
+                            </div>
+                            <div class="entry-c">
+                                <div class="entry-title">
+                                    <h2><a href="/home/singleblog/@item.ID">@item.Title</a></h2>
+                                </div>
+                                <ul class="entry-meta clearfix">
+                                    <li><i class="icon-calendar3"></i> @item.DateTime</li>
+                                    <li><a href="#"><i class="icon-user"></i> @item.AuthorID</a></li>
+                                    @{
+                                        string result = "";
+                                        foreach (var cat in ViewBag.categories)
+                                        {
+                                            if (item.CategoryID == cat.ID)
+                                            {
+                                                result = cat.Name;
+                                            }
+                                        }
+                                        string result1 = "";
+                                        int roleid = 0;
+                                        foreach (var aut in ViewBag.users)
+                                        {
+                                            if (item.AuthorID == aut.ID)
+                                            {
+                                                roleid = aut.RoleID;
+
+                                            }
+                                        }
+                                        foreach (var role in ViewBag.roles)
+                                        {
+                                            if (role.ID == roleid)
+                                            {
+                                                result1 = role.Name;
+                                            }
+                                        }
+
+
+
+                                    }
+                                    <li><i class="icon-folder-open"></i> <a href="#">@result</a>
+                                    <li><a href="#"><i class="icon-user"></i> @result1</a></li>
+                                    @*<li><a href="#"><i class="icon-comments"></i> 13</a></li>*@
+                                    @*<li><a href="#"><i class="icon-camera-retro"></i></a></li>*@
+                                </ul>
+                              
+                            </div>
+                        </div>
+                                        }
+                }
+
+
+
+            </div><!-- #posts end -->
+
+
+
+
+
+            <h2> Result of @ViewBag.text  from Products</h2>
+            <!-- Posts
+    ============================================= -->
+            <div id="posts" class="small-thumbs">
+
+                @{
+                    foreach (var item in ViewBag.resultproducts)
+                    {
+                        <div class="entry clearfix">
+                            <div class="entry-image">
+                                <a href="@item.Picture" data-lightbox="image"><img class="image_fade" src="@item.Picture" alt="Standard Post with Image"></a>
+                            </div>
+                            <div class="entry-c">
+                                <div class="entry-title">
+                                    <h2><a href="/home/singleproduct/@item.ID">@item.Name</a></h2>
+                                </div>
+                                <ul class="entry-meta clearfix">
+                                    <li><i class="icon-calendar3"></i> @item.ArrivedTime</li>
+                                 
+                                   
+                                </ul>
+
+                            </div>
+                        </div>
+                                        }
+                }
+
+
+
+            </div><!-- #posts end -->
+
+
+            </div><!-- .postcontent end -->
+
+
+        </div>
+
+
+</section><!-- #content end -->
+

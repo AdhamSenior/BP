@@ -1,0 +1,89 @@
+﻿
+
+<div class="modal-content" style="width:900px;     position: absolute; left: -130px;">
+    <div class="modal-header" style="border-bottom:0;    padding-top: 40px; margin-top:-15px;">
+        <h3 style="right: 30px; top: 5px; position: absolute;"><button class="close" data-dismiss="modal" area-hidden="true" style="padding:0;"><i class="material-icons" style="font-size: 36px; color: red; border-color: red; background: antiquewhite; padding:0;">close</i></button></h3>
+
+    </div>
+    <div class="modal-body" style="padding: 10px;
+    padding-top: 0px;">
+
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text card-header-success">
+                    <div class="card-text">
+                        <h4 class="card-title">Add Form</h4>
+                    </div>
+                </div>
+                <div class="card-body" style="padding-top:15px">
+
+                    <form action="/User/AddUserss" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Firstname">Firstname</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Lastname:</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname" required>
+                            </div>
+
+                        </div>
+                      
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="role">Select Role</label>
+                                <select id="role" class="form-control" name="role">
+                                    @{
+                                        foreach (var item in ViewBag.roles)
+                                        {
+                                            <option value="@item.ID">    @item.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+
+                        </div>
+
+                     
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="Lastname">Email:</label>
+                                <input type="text" class="form-control" name="email" id="email"  required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Username:</label>
+                                <input type="text" class="form-control" name="username" id="username" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Password:</label>
+                                <input type="text" class="form-control" name="password" id="password" required>
+                            </div>
+                        </div>
+                       
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Phonenumber">Phone number:</label>
+                                <input type="text" class="form-control" name="phonenumber" id="phonenumber" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <button type="submit" class="fadeIn fourth btn btn-success" style="margin-top:24px; margin-right:50%;">Create New User</button>
+                            </div>
+                        </div>
+                       
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+

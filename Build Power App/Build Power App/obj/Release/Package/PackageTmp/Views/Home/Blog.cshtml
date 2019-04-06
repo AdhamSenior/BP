@@ -1,0 +1,219 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+<!-- Content
+============================================= -->
+
+    @*<section id="page-title" class="">
+
+        <div class="container clearfix">
+            <h1>Blog</h1>
+            <span>A Short Page Title Tagline</span>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+        </div>
+
+    </section>*@<!-- #page-title end-->
+    <!-- Content
+       ============================================= -->
+@{
+    if (Build_Power_App.App_Start.Control.isRu == true)
+    {
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <!-- Post Content
+                    ============================================= -->
+                    <div class="postcontent nobottommargin clearfix">
+
+                        <!-- Posts
+                        ============================================= -->
+                        <div id="posts" class="small-thumbs">
+
+                            @{
+                                foreach (var item in ViewBag.news)
+                                {
+                                    if(item.language=="e")
+                                    <div class="entry clearfix">
+                                        <div class="entry-image">
+                                            <a href="@item.Picture" data-lightbox="image"><img class="image_fade" src="@item.Picture" alt="Standard Post with Image"></a>
+                                        </div>
+                                        <div class="entry-c">
+                                            <div class="entry-title">
+                                                <h2><a href="/home/singleblog/@item.ID">@item.Title</a></h2>
+                                            </div>
+                                            <ul class="entry-meta clearfix">
+                                                <li><i class="icon-calendar3"></i> @item.DateTime</li>
+                                                <li><a href="#"><i class="icon-user"></i> @item.AuthorID</a></li>
+                                                @{
+                                                    string result = "";
+                                                    foreach (var cat in ViewBag.categories)
+                                                    {
+                                                        if (item.CategoryID == cat.ID)
+                                                        {
+                                                            result = cat.Name;
+                                                        }
+                                                    }
+                                                    string result1 = "";
+                                                    int roleid = 0;
+                                                    foreach (var aut in ViewBag.users)
+                                                    {
+                                                        if (item.AuthorID == aut.ID)
+                                                        {
+                                                            roleid = aut.RoleID;
+
+                                                        }
+                                                    }
+                                                    foreach (var role in ViewBag.roles)
+                                                    {
+                                                        if (role.ID == roleid)
+                                                        {
+                                                            result1 = role.Name;
+                                                        }
+                                                    }
+
+
+
+                                                }
+                                                <li><i class="icon-folder-open"></i> <a href="#">@result</a>
+                                                <li><a href="#"><i class="icon-user"></i> @result1</a></li>
+                                                @*<li><a href="#"><i class="icon-comments"></i> 13</a></li>*@
+                                                @*<li><a href="#"><i class="icon-camera-retro"></i></a></li>*@
+                                            </ul>
+                                            <div class="entry-content">
+                                                <p>@item.Description</p>
+                                                <a href="/home/singleblog/@item.ID" class="button button-border button-rounded">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                    }
+                            }
+
+
+
+                        </div><!-- #posts end -->
+                        <!-- Pagination
+                        ============================================= -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+
+                                <a href="/Home/GetAllBlog" class="btn btn-outline-dark" style="margin-left:50%;">Load More</a>
+                            </div>
+                        </div>
+                        <!-- .pager end -->
+
+                    </div><!-- .postcontent end -->
+
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+                                                    }
+
+                                                    else
+                                                    {
+                                                        <section id="content">
+
+                                                            <div class="content-wrap">
+
+                                                                <div class="container clearfix">
+
+                                                                    <!-- Post Content
+                                                                    ============================================= -->
+                                                                    <div class="postcontent nobottommargin clearfix">
+
+                                                                        <!-- Posts
+                                                                        ============================================= -->
+                                                                        <div id="posts" class="small-thumbs">
+
+                                                                            @{
+                                                                                foreach (var item in ViewBag.news)
+                                                                                {
+                                                                                    <div class="entry clearfix">
+                                                                                        <div class="entry-image">
+                                                                                            <a href="@item.Picture" data-lightbox="image"><img class="image_fade" src="@item.Picture" alt="Standard Post with Image"></a>
+                                                                                        </div>
+                                                                                        <div class="entry-c">
+                                                                                            <div class="entry-title">
+                                                                                                <h2><a href="/home/singleblog/@item.ID">@item.Title</a></h2>
+                                                                                            </div>
+                                                                                            <ul class="entry-meta clearfix">
+                                                                                                <li><i class="icon-calendar3"></i> @item.DateTime</li>
+                                                                                                <li><a href="#"><i class="icon-user"></i> @item.AuthorID</a></li>
+                                                                                                @{
+                                                                                                    string result = "";
+                                                                                                    foreach (var cat in ViewBag.categories)
+                                                                                                    {
+                                                                                                        if (item.CategoryID == cat.ID)
+                                                                                                        {
+                                                                                                            result = cat.Name;
+                                                                                                        }
+                                                                                                    }
+                                                                                                    string result1 = "";
+                                                                                                    int roleid = 0;
+                                                                                                    foreach (var aut in ViewBag.users)
+                                                                                                    {
+                                                                                                        if (item.AuthorID == aut.ID)
+                                                                                                        {
+                                                                                                            roleid = aut.RoleID;
+
+                                                                                                        }
+                                                                                                    }
+                                                                                                    foreach (var role in ViewBag.roles)
+                                                                                                    {
+                                                                                                        if (role.ID == roleid)
+                                                                                                        {
+                                                                                                            result1 = role.Name;
+                                                                                                        }
+                                                                                                    }
+
+
+
+                                                                                                }
+                                                                                                <li><i class="icon-folder-open"></i> <a href="#">@result</a>
+                                                                                                <li><a href="#"><i class="icon-user"></i> @result1</a></li>
+                                                                                                @*<li><a href="#"><i class="icon-comments"></i> 13</a></li>*@
+                                                                                                @*<li><a href="#"><i class="icon-camera-retro"></i></a></li>*@
+                                                                                            </ul>
+                                                                                            <div class="entry-content">
+                                                                                                <p>@item.Description</p>
+                                                                                                <a href="/home/singleblog/@item.ID" class="button button-border button-rounded">Read More</a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                                    }
+                                                                            }
+
+
+
+                                                                        </div><!-- #posts end -->
+                                                                        <!-- Pagination
+                                                                        ============================================= -->
+                                                                        <div class="row mb-3">
+                                                                            <div class="col-12">
+
+                                                                                <a href="/Home/GetAllBlog" class="btn btn-outline-dark" style="margin-left:50%;">Load More</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- .pager end -->
+
+                                                                    </div><!-- .postcontent end -->
+
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </section><!-- #content end -->
+                                                                                                    }
+}
+
+   

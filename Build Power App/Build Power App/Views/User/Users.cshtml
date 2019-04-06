@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Build_Power_App.User>
+
+
+<style>
+
+</style>
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog" role="dialog"></div>
+</div>
+
+
+
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header card-header-success">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="card-title">List of Users</h3>
+                </div>
+                <div class="col-md-6" style="text-align:right">
+                    <a href="@Url.Action("AddUsers", "User")" class="compItem btn btn-info btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">add</i> </a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-hover" id="CustomerGrid">
+                <thead class="text-success">
+                    <tr>
+                        <th>ID</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Phonenumber</th>
+                        <th>Email</th>
+                        <th>Role</th>
+
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ID</td>
+
+                            <td>@item.Firstname</td>
+                            <td>@item.Lastname</td>
+
+                            <td>@item.Phonenumber</td>
+                            <td>@item.Email</td>
+                            <td>
+                                @{ string result = "";  }
+                                @{
+
+                                    foreach (var role in ViewBag.roles)
+                                    {
+                                        if (role.ID == item.RoleID)
+                                        {
+                                            result = role.Name; break;
+                                        }
+                                    }
+
+                                }
+
+                                @result
+
+                            </td>
+
+
+
+
+
+                            @*<td>@Html.ActionLink(item.OrganizationName, "Details",
+                                new { id = item.ID }, new { @class = "compItem" })</td>*@
+                            <td>
+                                <a href="@Url.Action("DetailsUsers", "User",new { id = item.ID})" class="compItem btn btn-info btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">subject</i> </a>
+                                <a href="@Url.Action("EditUsers", "User",new { id = item.ID})" class="compItem btn btn-success btn-just-icon btn-fill btn-round btn-wd" style="color: white;"><i class="material-icons">mode_edit</i> </a>
+                                <a href="@Url.Action("DeleteUsers", "User",new { id = item.ID})" class="compItem btn btn-danger btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">delete</i> </a>
+
+                            </td>
+                        </tr>
+                                    }
+                </tbody>
+            </table>
+            @section scripts
+{
+                <script type="text/javascript">
+
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $(".compItem").click(function (e) {
+
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+                </script>
+            }
+        </div>
+    </div>
+</div>
+

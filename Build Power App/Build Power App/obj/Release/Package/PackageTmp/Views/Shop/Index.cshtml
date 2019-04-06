@@ -1,0 +1,1179 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Adham Qodirov" />
+    <link rel="icon" href="additional-assets/logo.ico" type="image/gif">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/Content/material-dashboard-html-v2.1.1/assets/css/material-dashboard.css" rel="stylesheet" />
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/core/jquery.min.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/core/popper.min.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/core/bootstrap-material-design.min.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/plugins/chartist.min.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/plugins/bootstrap-notify.js"></script>
+    <script src="~/Content/material-dashboard-html-v2.1.1/assets/js/material-dashboard.min.js"></script>
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/style.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/swiper.css" type="text/css" />
+
+    <!-- Construction Demo Specific Stylesheet -->
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/construction.css" type="text/css" />
+    <!-- / -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css" />
+    <link rel="stylesheet" href="~/Content/BP/css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/css/fonts.css" type="text/css" />
+
+    <link rel="stylesheet" href="~/Content/BP/css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/css/colors.css" type="text/css" />
+   
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Build | Power</title>
+
+</head>
+
+<body class="stretched">
+
+
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Top Bar
+        <!-- Top Bar
+          ============================================= -->
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half nobottommargin clearfix">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/build.power.969" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+                           <li><a href="https://www.instagram.com/build_power/" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+                        </ul>
+                
+                    </div><!-- #top-social end -->
+
+                </div>
+
+                <div class="col_half fright col_last clearfix nobottommargin">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                        <ul>
+                            <li>
+                                @{
+                                    if (Build_Power_App.App_Start.Control.isRu == true)
+                                    {
+                                        <a href="#">Язык</a>
+                                        <ul>
+                                            <li><a href="/home/changetoen">Eng</a></li>
+                                            <li><a href="/home/changetoru">Ru</a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a href="#">Language</a>
+                                        <ul>
+                                            <li><a href="/home/changetoen">Eng</a></li>
+                                            <li><a href="/home/changetoru">Ru</a></li>
+                                        </ul>
+                                    }
+                                }
+
+                            </li>
+                          
+
+
+                            <li>
+                                <img src="~/Content/BP/additional-assets/images/icon-header-02.png" id="cart" style="margin-left: 10px;" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                                <span class="header-icons-noti" style="background-color: #f18052;
+                                    border-radius: 50%;
+                                    margin: 0;
+                                    padding-right: 5px;
+                                    padding-top: 1px;
+                                    padding-bottom: 1px;
+                                    color:white;
+                                    padding-left: 5px;">@ViewBag.cartcount</span>
+
+
+                                    <ul style="width:250px; margin-left:-190px; padding:10px">
+                                        @foreach (var item in ViewBag.cart)
+                                        {
+                                            Product product = new Product();
+
+
+                                            foreach (var pr in ViewBag.products)
+                                            {
+                                                if (pr.ID == item.ProductID)
+                                                {
+                                                    product = pr; break;
+                                                }
+                                            }
+
+
+
+
+
+
+
+
+                                            <li class="header-cart-item" style="height:110px">
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6" style="padding-left: 5px;">
+                                                        <img src="@product.Picture" alt="IMG" style="width: 90px;height: 100px; object-fit: fill; padding:2px; padding-bottom:8px;">
+                                                    </div>
+                                                    <div class="form-group col-md-6" style="margin-left:-10px;   padding-top: 15px; padding-left: 1px;">
+                                                        <a href="#" class="header-cart-item-name" style="display: block; font-size: 15px; line-height:18px ">
+                                                            @product.Name
+                                                        </a>
+
+                                                        <p style="margin-top:2px;">
+                                                            <b>@item.Quantity x </b> $@Math.Round(Double.Parse(product.Price.ToString()), 2)   
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </li>
+                                        }
+
+                                        <li class="header-cart-item" style="height:55px">
+
+                                            @{
+                                                var pageName = ViewContext.RouteData.Values["controller"].ToString();
+                                                String pageRoute = ViewContext.RouteData.Values["action"].ToString();
+                                            }
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <form action="/Shop/Cart" method="post">
+
+                                                        <button type="submit" class="btn btn-sm btn-default pull-left col-lg-11 button button4" style="margin-top: 0px; height: 40px; width: 335px;     padding-left: 1px; padding-right: 1px;">
+                                                            <i class="icon-shopping-cart" style="padding-top:10px"></i><span>
+                                                                @{ string result = "";
+                                                                    if (Build_Power_App.App_Start.Control.isRu == true)
+                                                                    {
+                                                                        result = "Корзина";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        result = "Cart";
+
+                                                                    }
+                                                                }
+                                                                @result
+
+
+                                                            </span>
+                                                        </button>
+
+
+                                                    </form>
+
+
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <form action="/Shop/Clear" method="post">
+                                                        <input type="hidden" value="@pageName" name="page" />
+                                                        <input type="hidden" value="@pageRoute" name="pageRoute" />
+                                                        <button type="submit" class="btn btn-sm btn-default pull-left col-lg-11 button button4" style="margin-top: 0px; height: 40px; width: 329px;      padding-left: 5px; padding-right: 3px;">
+                                                            <i class="icon-shopping-cart" style="padding-top:10px"></i><span>
+                                                                @{ result = "";
+                                                                    if (Build_Power_App.App_Start.Control.isRu == true)
+                                                                    {
+                                                                        result = "Очистить";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        result = "Clear";
+
+                                                                    }
+                                                                }
+                                                                @result
+                                                            </span>
+                                                        </button>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div><!-- .top-links end -->
+
+                </div>
+
+            </div>
+
+        </div><!-- #top-bar end -->
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="sticky-style-2">
+
+            <div class="container clearfix">
+
+                <!-- Logo
+                ============================================= -->
+                <div id="logo">
+                    <a href="/home/index" class="standard-logo"><img src="~/Content/images/logo.png" alt="Canvas Logo"></a>
+                    <a href="/home/index" class="retina-logo"><img src="~/Content/images/logo.png" alt="Canvas Logo"></a>
+                </div><!-- #logo end -->
+
+
+                @{
+                    if (Build_Power_App.App_Start.Control.isRu == true)
+                    {
+
+                        <ul class="header-extras">
+                            <li>
+                                <i class="i-plain icon-call nomargin"></i>
+                                <div class="he-text">
+                                    Позвоните нам
+                                    <span>(97) 429 4333</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line2-envelope nomargin"></i>
+                                <div class="he-text">
+                                    Эл. адрес
+                                    <span>buildpower@inbox.ru</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line-clock nomargin"></i>
+                                <div class="he-text">
+                                    Мы открылись
+                                    <span>Пн-Сб, с 10:00 до 18:00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+
+                        <ul class="header-extras">
+                            <li>
+                                <i class="i-plain icon-call nomargin"></i>
+                                <div class="he-text">
+                                    Call Us
+                                    <span>(97) 429 4333</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line2-envelope nomargin"></i>
+                                <div class="he-text">
+                                    Email Us
+                                    <span>buildpower@inbox.ru</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line-clock nomargin"></i>
+                                <div class="he-text">
+                                    We'are Open
+                                    <span>Mon - Sat, 10AM to 6PM</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                    }
+                }
+
+
+
+
+            </div>
+
+            <div id="header-wrap">
+
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="with-arrows style-2 center">
+
+                    <div class="container clearfix">
+
+                        <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+
+
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <ul>
+                                    <li class="@ViewBag.home"><a href="/home/index"><div>Главная</div></a></li>
+                                    <li class="@ViewBag.about"><a href="/home/about"><div>О нас</div></a></li>
+                                    <li class="@ViewBag.blog"><a href="/home/blog"><div>Новости</div></a></li>
+                                    <li class="@ViewBag.investors"><a href="/home/investors"><div>Производители</div></a></li>
+                                    <li class="@ViewBag.projects"><a href="/home/projects"><div>Проекты</div></a></li>
+                                    <li class="@ViewBag.index"><a href="/shop/index"><div>Магазин</div></a></li>
+                                    <li><a href="/shop/cart"><div>Корзина</div></a></li>
+                                    <li class="@ViewBag.faq"><a href="/home/faq">FAQs</a></li>
+                                  <li class="@ViewBag.contact"><a href="/home/contact"><div>Контакт</div></a></li>
+                                </ul>
+                            }
+                            else
+                            {
+                                <ul>
+                                    <li class="@ViewBag.home"><a href="/home/index"><div>Home</div></a></li>
+                                    <li class="@ViewBag.about"><a href="/home/about"><div>About Us</div></a></li>
+                                    <li class="@ViewBag.blog"><a href="/home/blog"><div>News</div></a></li>
+                                    <li class="@ViewBag.investors"><a href="/home/investors"><div>Manufacturers</div></a></li>
+                                    <li class="@ViewBag.projects"><a href="/home/projects"><div>Projects</div></a></li>
+                                    <li class="@ViewBag.index"><a href="/shop/index"><div>Shop</div></a></li>
+                                    <li><a href="/shop/cart"><div>Cart</div></a></li>
+                                    <li class="@ViewBag.faq"><a href="/home/faq">FAQs</a></li>
+
+                                    <li class="@ViewBag.contact"><a href="/home/contact"><div>Contact</div></a></li>
+                                </ul>
+
+                            }
+                        }
+
+
+                        <!-- Top Search
+                        ============================================= -->
+
+
+
+
+
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <div id="top-search">
+                                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                                    <form action="#" method="get">
+                                        <input type="text" name="q" class="form-control" value="" placeholder="Поиск и нажмите ввод..">
+                                    </form>
+                                </div><!-- #top-search end -->
+                            }
+                            else
+                            {
+
+                                <div id="top-search">
+                                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                                    <form action="#" method="get">
+                                        <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                                    </form>
+                                </div><!-- #top-search end -->
+                            }
+                        }
+
+
+
+
+
+                    </div>
+
+                </nav><!-- #primary-menu end -->
+
+            </div>
+
+        </header><!-- #header end -->
+
+        @*<section id="page-title">
+
+            <div class="container clearfix">
+                <h1>Shop</h1>
+                <span>Start Buying your Favourite Theme</span>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                </ol>
+            </div>
+
+        </section>*@<!-- #page-title end -->
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <!-- Portfolio Filter
+                    ============================================= -->
+                    <ul id="portfolio-filter" class="portfolio-filter clearfix">
+
+                        @{ 
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <li class="activeFilter"><a href="#" data-filter="*">Показать все</a></li>
+
+                                <li><a href="#" data-filter=".pf-dress">Сыпучие материалы</a></li>
+                                <li><a href="#" data-filter=".pf-Shoes">Сухие материалы</a></li>
+                                <li><a href="#" data-filter=".pf-watch">Кирпичи</a></li>
+                            }
+                            else
+                            {
+                                <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
+
+                                <li><a href="#" data-filter=".pf-dress">Bulk materials</a></li>
+                                <li><a href="#" data-filter=".pf-Shoes">Dry materials</a></li>
+                                <li><a href="#" data-filter=".pf-watch">Bricks</a></li>
+
+                            }
+                        }
+                       
+
+                    </ul><!-- #portfolio-filter end -->
+
+                    <div style="float:right; width:150px;">
+
+                        <form class="form-inline" role="form" style="display: flex;">
+
+
+
+                            <!-- Example single danger button -->
+                            <div class="btn-group" style=" width 151px;">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background-color: #9c27b0;font-size: 13px; font-weight: 700; border-color:#9c27b0">
+                                    Filter
+                                </button>
+
+                                @{
+                                    if (Build_Power_App.App_Start.Control.isRu == true)
+                                    {
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/shop/filtersorting">Сортировка по умолчанию</a>
+                                            <a class="dropdown-item" href="/shop/filteradded">Последнее добавленное</a>
+                                            <a class="dropdown-item" href="/shop/filterhigh">Цена: от низкой к высокой</a>
+                                            <a class="dropdown-item" href="/shop/filterlow">Цена: по убыванию</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/shop/filtersorting">Default Sorting</a>
+                                            <a class="dropdown-item" href="/shop/filteradded">Last added</a>
+                                            <a class="dropdown-item" href="/shop/filterhigh">Price: low to high</a>
+                                            <a class="dropdown-item" href="/shop/filterlow">Price: high to low</a>
+                                        </div>
+                                    }
+                                }
+                              
+                            </div>
+                            @*<div class="input-group">
+                                    <select class="custom-select" id="inputGroupSelect04" style="margin-right: 5px;    border-radius: 3px;">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" style="margin-left: 5px;    border-radius: 3px;">Button</button>
+                                    </div>
+                                </div>*@
+                        </form>
+
+                    </div>
+
+                    <div class="clear"></div>
+                    @{
+
+                        ViewBag.kiyim = "product clearfix pf-dress";
+                        ViewBag.code = "pf-dress";
+                    }
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                @*<button id="btnShowModal" type="button"
+                                            class="btn btn-sm btn-default pull-left col-lg-11 button button4">
+                                         Modals
+                                    </button>*@
+
+                                <div class="modal fade login-modal" tabindex="-1" id="loginModal"
+                                     data-keyboard="false" data-backdrop="static" style="height: 700px;">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content" style=" margin-top -20px;">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    x
+                                                </button>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="/Shop/AddToCart" method="post" style="margin-bottom: -20px;">
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6" style="padding-right:30px;">
+                                                            <img src="" id="pictureee" style="width: 100%; height: 100%;  object-fit: contain;" alt="" />
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-12">
+                                                                    <label for="productname">Name</label>
+                                                                    <h3 id="productname"></h3>
+                                                                </div>
+                                                                <div class="form-group col-md-12" style="margin-top:-30px">
+                                                                    <label for="description">Description</label>
+                                                                    <p id="description"></p>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-row" style="margin-top:-35px">
+                                                                <div class="form-group col-md-6">
+                                                                    <label for="Price">Price</label>
+                                                                    <p id="pricee"></p>
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                    <label for="saleeprice">Sale</label>
+                                                                    <p id="saleeprice"></p>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="form-row" style="margin-top:-35px">
+                                                                <div class="form-group col-md-4">
+                                                                    <input type="number" class="form-control" value="1" placeholder="" name="quantity">
+                                                                </div>
+                                                                <div class="form-group col-md-8">
+                                                                    <button type="submit" class="btn btn-sm btn-default pull-left col-lg-11 button button4" style="margin-top: 0px; height: 40px; width: 329px;"><i class="icon-shopping-cart"></i><span> Add to Cart</span></button>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="form-group">
+                                                                <input class="form-control" name="id" type="hidden"
+                                                                       id="id" />
+
+                                                                <button type="button" id="btnHideModal" class="btn btn-primary button button4 btnHideModal" style="background-color: cadetblue; width: 93%;">
+                                                                    Back
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+
+
+
+
+
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+                    </script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+                    <script type="text/javascript">
+
+                        $(document).ready(function () {
+                            $(".btnShowModal").on('click', function () {
+
+
+                                var id = $(this).attr('data-id');
+                                $('#loginModal #id').val(id);
+
+                                var title = $(this).attr('data-title');
+                                $('#loginModal #productname').text(title);
+
+                                var description = $(this).attr('data-description');
+                                $('#loginModal #description').text(description);
+
+                                var picture = $(this).attr('data-picture');
+                                $('#loginModal #pictureee').attr("src", picture);
+
+                                var price = $(this).attr('data-price');
+                                $('#loginModal #pricee').text(price);
+
+                                var sale = $(this).attr('data-sale');
+                                $('#loginModal #saleeprice').text(sale);
+
+                                $("#loginModal").modal('show');
+                            });
+
+                            $(".btnHideModal").on('click', function () {
+                                $("#loginModal").modal('hide');
+                            });
+                        });
+                    </script>
+
+
+                    @*<script type="text/javascript">
+
+                            $(document).ready(function () {
+                                $(".login-modal").click(function () {
+                                    var login = $(this).attr('data-id');
+                                    $("#loginModal").modal('show');
+                                    $('#loginModal #inputUserName').val(login);
+                                });
+
+                                $(".login-modal").click(function () {
+                                    $("#loginModal").modal('hide');
+                                });
+                            });
+                        </script>*@
+
+
+
+                    <!-- Shop
+                    ============================================= -->
+                    <div id="shop" class="shop grid-container clearfix">
+
+
+
+
+
+                        @{ foreach (var item in ViewBag.products)
+                            {
+                                if (Build_Power_App.App_Start.Control.isRu == true)
+                                {
+                                    if (item.language == "ru")
+                                    {
+                                        <div class="product clearfix @item.code ">
+                                            <div class="product-image">
+                                                <a href="/shop/SingleProduct/@item.ID"><img src="@item.Picture" alt="Checked Short Dress" style="height:250px!important"></a>
+                                                @{
+                                                    if (item.isSale == 1)
+                                                    {
+                                                        <div class="sale-flash">Sale</div>
+                                                    }
+                                                }
+
+                                                <div class="product-overlay">
+                                                    @*<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>*@
+
+
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+
+                                                                <button type="button"
+                                                                        data-id="@item.ID"
+                                                                        data-title="@item.Name"
+                                                                        data-price="@item.Price"
+                                                                        data-description="@item.Description"
+                                                                        data-picture="@item.Picture"
+                                                                        data-sale="@item.SalePrice"
+                                                                        class="btn btn-sm btn-default pull-left col-lg-11 button button4 btnShowModal" style="width: 303px; margin-left: -5px;">
+                                                                    <i class="icon-shopping-cart"></i><span> Add to Cart</span>
+                                                                </button>
+
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                            <div class="product-desc">
+                                                <div class="product-title"><h3><a href="#">@item.Name</a></h3></div>
+                                                @{
+
+                                                    if (item.isSale == 1)
+                                                    {
+                                                        <div class="product-price"><del>$@Math.Round(Double.Parse(item.Price.ToString()), 2)</del> <ins>$@Math.Round(Double.Parse(item.SalePrice.ToString()), 2)</ins></div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="product-price">$@Math.Round(Double.Parse(item.Price.ToString()), 2)</div>
+                                                    }
+                                                }
+
+                                                @*<div class="product-rating">
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star-half-full"></i>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (item.language == "en")
+                                                        {
+                                        <div class="product clearfix @item.code ">
+                                            <div class="product-image">
+                                                <a href="/shop/SingleProduct/@item.ID"><img src="@item.Picture" alt="Checked Short Dress" style="height:250px!important"></a>
+                                                @{
+                                                    if (item.isSale == 1)
+                                                    {
+                                                        <div class="sale-flash">Sale</div>
+                                                    }
+                                                }
+
+                                                <div class="product-overlay">
+                                                    @*<a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>*@
+
+
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+
+                                                                <button type="button"
+                                                                        data-id="@item.ID"
+                                                                        data-title="@item.Name"
+                                                                        data-price="@item.Price"
+                                                                        data-description="@item.Description"
+                                                                        data-picture="@item.Picture"
+                                                                        data-sale="@item.SalePrice"
+                                                                        class="btn btn-sm btn-default pull-left col-lg-11 button button4 btnShowModal" style="width: 303px; margin-left: -5px;">
+                                                                    <i class="icon-shopping-cart"></i><span> Add to Cart</span>
+                                                                </button>
+
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                            <div class="product-desc">
+                                                <div class="product-title"><h3><a href="#">@item.Name</a></h3></div>
+                                                @{
+
+                                                    if (item.isSale == 1)
+                                                    {
+                                                        <div class="product-price"><del>$@Math.Round(Double.Parse(item.Price.ToString()), 2)</del> <ins>$@Math.Round(Double.Parse(item.SalePrice.ToString()), 2)</ins></div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="product-price">$@Math.Round(Double.Parse(item.Price.ToString()), 2)</div>
+                                                    }
+                                                }
+
+                                                @*<div class="product-rating">
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star-half-full"></i>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+
+                                                            }
+                                                        }
+
+                                                    }
+                        }
+
+
+                    </div><!-- #shop end -->
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+        <!-- Footer
+        ============================================= -->
+    <footer id="footer" class="dark">
+
+        <div class="container">
+
+            <!-- Footer Widgets
+            ============================================= -->
+            <div class="footer-widgets-wrap clearfix">
+
+                <div class="col_two_third">
+
+                    <div class="widget clearfix">
+
+                        <img src="~/Content/BP/additional-assets/white-logo.png" alt="" class="alignleft" style="margin-top: 8px; width:100px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <p>Мы верим в <strong>Простой</strong>, <strong>Творческий</strong> &amp; <strong>Гибкий</strong> Стандарты дизайна с сетчаткой &amp; Отзывчивый подход. Просмотрите удивительные возможности этого магазина.</p>
+
+                            }
+                            else
+                            {
+                                <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p>
+
+
+                            }
+                        }
+
+
+                        <div class="line" style="margin: 30px 0;"></div>
+
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+
+                                            <li class="@ViewBag.home"><a href="/home/index">Главная</a></li>
+                                            <li class="@ViewBag.about"><a href="/home/about">О нас</a></li>
+                                            <li class="@ViewBag.blog"><a href="/home/blog">Новости</a></li>
+                                            <li class="@ViewBag.investors"><a href="/home/investors">Производители</a></li>
+
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li class="@ViewBag.index"><a href="/shop/index">Магазин</a></li>
+                                            <li><a href="/shop/cart">Корзина</a></li>
+
+                                            <li class="@ViewBag.projects"><a href="/home/projects">Проекты</a></li>
+                                            <li class="@ViewBag.contact"><a href="/home/contact">Контакт</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li><a href="/shop/singleproduct/1">Один продукт</a></li>
+                                            <li><a href="/shop/index">Э коммерц</a></li>
+                                            <li><a href="/home/login">Авторизоваться</a></li>
+                                            <li><a href="/home/registration">Регистрация</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li><a href="/home/login">Админка</a></li>
+                                            <li><a href="/home/about">Зачем Build Power</a></li>
+                                            <li><a href="/home/investors">Производители</a></li>
+                                            <li><a href="/home/projects">Наши работы</a></li>
+                                            <li><a href="/home/contact">Контакт</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li><a href="/home/index">Home</a></li>
+                                            <li><a href="/home/about">About us</a></li>
+                                            <li><a href="/home/faq">FAQs</a></li>
+                                            <li><a href="/home/contact">Contact us</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li><a href="/shop/index">Shop</a></li>
+                                            <li><a href="/shop/cart">Cart</a></li>
+                                            <li><a href="/home/blog">News</a></li>
+                                            <li><a href="/home/projects">Projects</a></li>
+                                            <li><a href="/shop/investors">Manufacturers</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        <ul>
+                                            <li><a href="/Home/Condition">Admin</a></li>
+                                            <li><a href="/home/login">Login</a></li>
+                                            <li><a href="/home/registration">Register</a></li>
+
+                                            <li><a href="/home/warranty">Delivery warranty</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-6 bottommargin-sm widget_links">
+                                        @*<ul>
+                                                <li><a href="/home/login">Admin</a></li>
+                                                <li><a href="/home/about">Why Build Power</a></li>
+                                                <li><a href="/home/investors">Investors</a></li>
+                                                <li><a href="/home/projects">Our Works</a></li>
+                                                <li><a href="/home/contact">Contact</a></li>
+                                            </ul>*@
+                                    </div>
+
+                                </div>
+
+                            }
+                        }
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="col_one_third col_last">
+
+                    <div class="widget clear-bottommargin-sm clearfix">
+
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 bottommargin-sm">
+                                        <div class="footer-big-contacts">
+                                            <span>Позвоните нам:</span>
+                                            (97) 429 4333
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 bottommargin-sm">
+                                        <div class="footer-big-contacts">
+                                            <span>Отправить письмо:</span>
+                                            buildpower@inbox.ru
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            }
+                            else
+                            {
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 bottommargin-sm">
+                                        <div class="footer-big-contacts">
+                                            <span>Call Us:</span>
+                                            (97) 429 4333
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 bottommargin-sm">
+                                        <div class="footer-big-contacts">
+                                            <span>Send an Email:</span>
+                                            buildpower@inbox.ru
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            }
+                        }
+
+
+
+
+                    </div>
+
+                    <div class="widget subscribe-widget clearfix">
+
+
+                        @{
+                            if (Build_Power_App.App_Start.Control.isRu == true)
+                            {
+                                <div class="row">
+
+                                    <div class="col-lg-6 clearfix bottommargin-sm">
+                                        <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                            <i class="icon-facebook"></i>
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                        <a href="#"><small style="display: block; margin-top: 3px;"><strong>Нажми лайк</strong><br>на Фейсбуке</small></a>
+                                    </div>
+                                    <div class="col-lg-6 clearfix">
+                                        <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                                            <i class="icon-rss"></i>
+                                            <i class="icon-rss"></i>
+                                        </a>
+                                        <a href="#"><small style="display: block; margin-top: 3px;"><strong>Подписывайся</strong><br>в RSS-каналы</small></a>
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="row">
+
+                                    <div class="col-lg-6 clearfix bottommargin-sm">
+                                        <a href="https://www.facebook.com/build.power.969" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                            <i class="icon-facebook"></i>
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/build.power.969"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+                                    </div>
+                                    <div class="col-lg-6 clearfix">
+                                        <a href="https://www.instagram.com/build_power/" class="social-icon si-dark si-colored si-instagram nobottommargin" style="margin-right: 10px;">
+                                            <i class="icon-instagram"></i>
+                                            <i class="icon-instagram"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/build_power/"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Instagram</small></a>
+                                    </div>
+
+                                </div>
+
+                            
+                            }
+                        }
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div><!-- .footer-widgets-wrap end -->
+
+        </div>
+
+        <!-- Copyrights
+        ============================================= -->
+        <div id="copyrights">
+
+            @{
+                if (Build_Power_App.App_Start.Control.isRu == true)
+                {
+                    <div class="container clearfix">
+
+                        <div class="col_half">
+                            Copyrights &copy; 2019 Все права защищены BuildPower Inc.<br>
+                            <div class="copyright-links"><a href="/home/faq">Условия эксплуатации</a> / <a href="/home/faq">политика конфиденциальности</a></div>
+                        </div>
+
+                        <div class="col_half col_last tright">
+                            <div class="copyrights-menu copyright-links clearfix">
+                                <a href="/home/index">Главная</a>/<a href="/home/about">О нас</a>/<a href="/home/investors">Kлиенты</a>/<a href="/home/faq">FAQs</a>/<a href="/home/contact">Контакт</a>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="container clearfix">
+
+                        <div class="col_half">
+                            Copyrights &copy; 2019 All Rights Reserved by BuildPower Inc.<br>
+                            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                        </div>
+
+                        <div class="col_half col_last tright">
+                            <div class="copyrights-menu copyright-links clearfix">
+                                <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                }
+            }
+
+
+
+
+
+        </div><!-- #copyrights end -->
+
+    </footer><!-- #footer end -->
+        <!-- Go To Top
+
+
+
+        ============================================= -->
+        <div id="gotoTop" class="icon-angle-up"></div>
+
+        <!-- External JavaScripts
+        ============================================= -->
+        <script src="~/Content/BP/js/jquery.js"></script>
+        <script src="~/Content/BP/js/plugins.js"></script>
+
+        <!-- Range Slider Plugin -->
+        <script src="~/Content/BP/js/components/rangeslider.min.js"></script>
+
+        <!-- Footer Scripts
+        ============================================= -->
+        <script src="~/Content/BP/js/functions.js"></script>
+
+        <script>
+
+            var priceRangefrom = 0,
+                priceRangeto = 0,
+                $container = null;
+
+            jQuery(window).on('load', function () {
+
+                $container = $('#shop');
+
+                $container.isotope({ transitionDuration: '0.65s' });
+
+                $('#portfolio-filter a').click(function () {
+                    $('#portfolio-filter li').removeClass('activeFilter');
+                    $(this).parent('li').addClass('activeFilter');
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({ filter: selector });
+                    return false;
+                });
+
+                $(window).resize(function () {
+                    $container.isotope('layout');
+                });
+
+            });
+
+
+        </script>
+
+    </body>
+</html>

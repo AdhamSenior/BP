@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+<style>
+    .project-overlay{
+        margin-bottom:5px;
+        color:white;
+        font-size:18px;
+    }
+</style>
+
+<!-- Page Title
+============================================= -->
+@*<section id="page-title" class="">
+
+    <div class="container clearfix">
+        <h1>Projects</h1>
+        <span>A Short Page Title Tagline</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Projects</li>
+        </ol>
+    </div>
+
+</section>*@<!-- #page-title end -->
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <h2 class="center ls1 bottommargin">Some of Our Esteemed Projects:</h2>
+
+            <div id="portfolio" class="portfolio grid-container clearfix">
+
+                @{
+                    foreach (var item in ViewBag.projects)
+                    {
+
+                        <article class="portfolio-item pf-media pf-icons">
+                            <div class="portfolio-image">
+                                <img src="@item.Picture" alt="The Atmosphere">
+                                <div class="portfolio-overlay" style="padding-top: 40px;">
+                                    <p class="project-overlay"><b>Company:</b> @item.CompanyName</p>
+                                    <p class="project-overlay"><b>Website:</b> @item.CompanyWebsite</p>
+                                    <p class="project-overlay"><b>Price:</b> $@item.Price</p>
+                                    @*<a href="#" class="center-icon"><i class="icon-line-ellipsis"></i></a>*@
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h3><a href="#">@item.ProjectName</a></h3>
+                                <span>@item.Location</span>
+                            </div>
+                        </article>
+
+                    }
+
+                }
+
+            </div>
+
+        </div>
+
+        <a href="/home/contact" class="button button-3d nobottomborder button-full center tright t300 font-primary topmargin footer-stick" style="font-size: 26px;">
+            <div class="container clearfix">
+                Would you like to Build your Dream Home with Us? <strong>Enquire Here</strong> <i class="icon-angle-right" style="top:3px;"></i>
+            </div>
+        </a>
+
+    </div>
+
+</section><!-- #content end -->

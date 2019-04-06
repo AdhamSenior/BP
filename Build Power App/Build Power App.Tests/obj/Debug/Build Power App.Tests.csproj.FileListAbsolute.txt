@@ -1,0 +1,55 @@
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ApplicationInsights.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\csc.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\vbc.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Build Power App.Tests.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Build Power App.Tests.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Build Power App.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\EntityFramework.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.Mvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.Razor.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Build Power App.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\EntityFramework.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.Mvc.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.Razor.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\EntityFramework.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\System.Web.Mvc.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\System.Web.Razor.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\System.Web.WebPages.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\obj\Debug\Build Power App.Tests.csprojResolveAssemblyReference.cache
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\obj\Debug\Build Power App.Tests.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\obj\Debug\Build Power App.Tests.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Build Power App.Tests.dll.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\CaptchaMvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\CaptchaMvc.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\CaptchaMvc.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Twilio.AspNet.Mvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Twilio.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Newtonsoft.Json.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Microsoft.IdentityModel.Logging.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Twilio.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Newtonsoft.Json.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App.Tests\bin\Debug\Microsoft.IdentityModel.Tokens.xml

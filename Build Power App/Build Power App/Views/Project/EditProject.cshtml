@@ -1,0 +1,113 @@
+﻿<div class="modal-content" style="width:900px;     position: absolute; left: -130px;">
+    <div class="modal-header" style="border-bottom:0;    padding-top: 40px; margin-top:-15px;">
+        <h3 style="right: 30px; top: 5px; position: absolute;"><button class="close" data-dismiss="modal" area-hidden="true" style="padding:0;"><i class="material-icons" style="font-size: 36px; color: red; border-color: red; background: antiquewhite; padding:0;">close</i></button></h3>
+
+    </div>
+    <div class="modal-body" style="padding: 10px;
+    padding-top: 0px;">
+
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text card-header-success">
+                    <div class="card-text">
+                        <h4 class="card-title">Edit Form</h4>
+                        @if (ViewBag.mess != null)
+                        {
+                            <h4 class="card-title" style="color:red">@ViewBag.mess</h4>
+                        }
+
+                    </div>
+                </div>
+                <div class="card-body" style="padding-top:15px">
+
+                    <form action="/Project/EditProject" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="projectname">Project Name</label>
+                                <input type="text" class="form-control" name="projectname" id="projectname" value="@ViewBag.model.ProjectName" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="company">Company Name</label>
+                                <input type="text" class="form-control" name="company" id="company" value="@ViewBag.model.CompanyName" required>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" rows="4" name="description" id="description" required>@ViewBag.model.Description</textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="price">Price</label>
+                                <input type="text" class="form-control" name="price" id="price"value="@ViewBag.model.Price"  required>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" name="location" id="location" value="@ViewBag.model.Location" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                            </div>
+                            <div class="form-row col-md-6" style="margin-left: 5px; margin-top: 15px;">
+                                <label for="file">New Image</label>
+                                <input id="file" type="file" name="file" class="form-control-file" onchange="show(this)" style="margin-bottom: 10px;">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label for="website">Old Image</label>
+                                <img src="@Url.Content("~/Content/images/" + System.IO.Path.GetFileName(@ViewBag.model.Picture))" style="width:400px; height:250px;  object-fit: contain;" alt="" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="website">New Image</label>
+                                <img id="user_img" style="border: solid 3px aqua;
+                                     position: absolute;
+                                     margin-top: 42px;
+                                     right: 10px;
+                                     width: 381px;
+                                     height: 224px;
+                                     object-fit: cover;" />
+
+                                <script type="text/javascript">
+
+                           function show(input) {
+                               if (input.files && input.files[0]) {
+                                   var filerdr = new FileReader();
+                                   filerdr.onload = function (e) {
+                                       $('#user_img').attr('src', e.target.result);
+                                   }
+                                   filerdr.readAsDataURL(input.files[0]);
+                               }
+                           }
+                                </script>
+                            </div>
+                        </div>
+
+
+                     
+                        <input type="hidden" class="fadeIn fourth btn btn-danger" name="id" value="@ViewBag.model.ID">
+                        <button type="submit" class="fadeIn fourth btn btn-success">Update</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+

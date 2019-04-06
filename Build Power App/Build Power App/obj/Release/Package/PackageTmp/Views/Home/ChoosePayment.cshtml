@@ -1,0 +1,123 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Adham Qodirov" />
+    <link rel="icon" href="~/Content/BP/additional-assets/logo.ico" type="image/gif">
+
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/style.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/swiper.css" type="text/css" />
+
+    <!-- Construction Demo Specific Stylesheet -->
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/construction.css" type="text/css" />
+    <!-- / -->
+
+    <link rel="stylesheet" href="~/Content/BP/css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/BP/css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/css/fonts.css" type="text/css" />
+
+    <link rel="stylesheet" href="~/Content/BP/css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="~/Content/BP/additional-assets/css/colors.css" type="text/css" />
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Build | Power</title>
+
+</head>
+
+<body class="stretched">
+
+    <section id="content">
+
+        <div class="content-wrap">
+            <h2 style="text-align:center;    margin-top: 1%; color:#F18052;">Choose Payment</h2>
+
+            <style>
+                div.polaroid {
+                    width: 43%;
+                    background-color: white;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    margin-bottom: 25px;
+                    display: inline-grid;
+                    margin-top: 20px;
+                    margin-right: 30px;
+                    margin-left: 30px;
+                    transition: opacity 1s ease-in-out;
+                }
+
+                    div.polaroid:hover {
+                        opacity: 0.3;
+                        color: #F18052;
+                        cursor: pointer;
+                    }
+
+                a:hover {
+                    color: #F18052;
+                }
+
+                div.container {
+                    text-align: center;
+                    padding: 10px 20px;
+                }
+            </style>
+            @*href="@Url.Action("PaymentWithPaypal", "shop")"*@
+
+            <div class="container clearfix">
+                <a href="@Url.Action("PaymentWithPaypal", "shop")" target="_blank">
+                    <div class="polaroid">
+                        <img src="/Content/paypal.jpg" alt="5 Terre" style="width:100%; height: 300px; padding-bottom:25px; padding-top:25px;   object-fit: contain;">
+                       
+                    </div>
+                </a>
+                <a href="@Url.Action("Cash", "shop")" target="_blank">
+                    <div class="polaroid">
+                        <img src="/Content/cash.png" alt="5 Terre" style="width:100%; height: 300px; padding-bottom:25px; padding-top:25px;   object-fit: contain;">
+
+                    </div>
+                </a>
+                <a href="#" target="_blank">
+                    <div class="polaroid" style="position:relative">
+                       
+                        <img src="/Content/payme.png" href="#" alt="Norther Lights" style="width:100%; height: 300px;  padding-bottom:30px; padding-top:25px;  object-fit: contain;    background-color: rgba(255, 255, 255, 0.43); opacity:0.15;">
+                        <p style="position:absolute; left:50%; top:50%;  transform: translate(-50%, -50%); font-size:40px; font-weight:500;">Coming soon...</p>
+                    </div>
+                </a>
+
+                <!-- Post Content
+                ============================================= -->
+
+
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+    <script src="~/Content/BP/js/jquery.js"></script>
+    <script src="~/Content/BP/js/plugins.js"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="~/Content/BP/js/functions.js"></script>
+
+
+
+</body>
+</html>

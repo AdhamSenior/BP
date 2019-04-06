@@ -1,0 +1,99 @@
+﻿
+<div class="modal-content" style="width:900px;     position: absolute; left: -130px;">
+    <div class="modal-header" style="border-bottom:0;    padding-top: 40px; margin-top:-15px;">
+        <h3 style="right: 30px; top: 5px; position: absolute;"><button class="close" data-dismiss="modal" area-hidden="true" style="padding:0;"><i class="material-icons" style="font-size: 36px; color: red; border-color: red; background: antiquewhite; padding:0;">close</i></button></h3>
+
+    </div>
+    <div class="modal-body" style="padding: 10px;
+    padding-top: 0px;">
+
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text card-header-success">
+                    <div class="card-text">
+                        <h4 class="card-title">Edit Form</h4>
+                        @if (ViewBag.mess != null)
+                        {
+                            <h4 class="card-title" style="color:red">@ViewBag.mess</h4>
+                        }
+
+                    </div>
+                </div>
+                <div class="card-body" style="padding-top:15px">
+
+                    <form action="/User/EditUsers" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Firstname">Firstname</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" value="@ViewBag.model.Firstname" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Lastname:</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname" value="@ViewBag.model.Lastname" required>
+                            </div>
+
+                        </div>
+                      
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="price">Select Roles</label>
+
+                                <select id="category" class="form-control" name="role">
+                                    @{
+
+                                        foreach (var item in ViewBag.roles)
+                                        {
+                                            if (item.ID == ViewBag.model.RoleID)
+                                            {
+                                                <option value="@ViewBag.model.RoleID" selected>    @item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.ID">    @item.Name</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Phonenumber">Phone number:</label>
+                                <input type="text" class="form-control" name="phonenumber" id="phonenumber" value="@ViewBag.model.Phonenumber" required>
+                            </div>
+
+                        </div>
+                                      
+                      
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="Lastname">Email:</label>
+                                <input type="text" class="form-control" name="email" id="email" value="@ViewBag.model.Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Username:</label>
+                                <input type="text" class="form-control" name="username" id="username" value="@ViewBag.model.Username" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Lastname">Password:</label>
+                                <input type="text" class="form-control" name="password" id="password" value="@ViewBag.model.Password" required>
+                            </div>
+                        </div>
+                       
+
+                        <input type="hidden" class="fadeIn fourth btn btn-danger" name="id" value="@ViewBag.model.ID">
+                        <button type="submit" class="fadeIn fourth btn btn-success">Update</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+

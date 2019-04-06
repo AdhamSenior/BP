@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Build_Power_App.Project>
+
+
+<style>
+
+</style>
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog" role="dialog"></div>
+</div>
+
+
+
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header card-header-success">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="card-title">List of Projects</h3>
+                </div>
+                <div class="col-md-6" style="text-align:right">
+                    <a href="@Url.Action("AddProject", "Project")" class="compItem btn btn-info btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">add</i> </a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-hover" id="CustomerGrid">
+                <thead class="text-success">
+                    <tr>
+                        <th>ID</th>
+                        <th>Picture</th>
+                        <th>ProjectName</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Description</th>                      
+                        <th>CompanyName</th>
+                        <th>CompanyWebsite</th>
+                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ID</td>
+                            <td>
+                                <img src="@item.Picture" style="width:130px; height:130px;  object-fit: cover;" alt="Alternate Text" />
+
+
+                            </td>
+                            <td>@item.ProjectName</td>
+                            <td>@item.Location</td>
+                          
+                            <td>@item.Price</td>
+                            <td>@item.Description</td>
+                            <td>@item.CompanyName</td>
+                            <td>@item.CompanyWebsite</td>
+                           
+
+                            @*<td>@Html.ActionLink(item.OrganizationName, "Details",
+                                new { id = item.ID }, new { @class = "compItem" })</td>*@
+                            <td>
+                                <a href="@Url.Action("DetailsProject", "Project",new { id = item.ID})" class="compItem btn btn-info btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">subject</i> </a>
+                                <a href="@Url.Action("EditProject", "Project",new { id = item.ID})" class="compItem btn btn-success btn-just-icon btn-fill btn-round btn-wd" style="color: white;"><i class="material-icons">mode_edit</i> </a>
+                                <a href="@Url.Action("DeleteProject", "Project",new { id = item.ID})" class="compItem btn btn-danger btn-just-icon btn-fill btn-round" style="color: white;"><i class="material-icons">delete</i> </a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @section scripts
+{
+                <script type="text/javascript">
+
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $(".compItem").click(function (e) {
+
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+                </script>
+            }
+        </div>
+    </div>
+</div>

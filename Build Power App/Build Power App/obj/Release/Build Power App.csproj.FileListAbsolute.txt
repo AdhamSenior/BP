@@ -1,0 +1,74 @@
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ApplicationInsights.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\csc.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\System.Collections.Immutable.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\System.Reflection.Metadata.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\vbc.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\VBCSCompiler.exe
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\roslyn\VBCSCompiler.exe.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Build Power App.dll.config
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Build Power App.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Build Power App.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\EntityFramework.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\EntityFramework.SqlServer.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.Agent.Intercept.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.DependencyCollector.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.PerfCounterCollector.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.ServerTelemetryChannel.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.Web.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.WindowsServer.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.ApplicationInsights.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.Web.Infrastructure.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Helpers.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Mvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Razor.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.Deployment.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.Razor.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\EntityFramework.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\EntityFramework.SqlServer.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.DependencyCollector.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.ServerTelemetryChannel.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.Web.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.AI.WindowsServer.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.ApplicationInsights.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Razor.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.Deployment.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Webpages.Razor.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Helpers.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.Web.Mvc.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\EntityFramework.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Razor.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Webpages.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Webpages.Deployment.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Webpages.Razor.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Helpers.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\System.Web.Mvc.resources.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\obj\Release\Build Power App.csprojResolveAssemblyReference.cache
+I:\2019\BuildPower Construction\Build Power App\Build Power App\obj\Release\Build Power App.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\obj\Release\Build Power App.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\CaptchaMvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.IdentityModel.Logging.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.IdentityModel.Tokens.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Newtonsoft.Json.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\PayPal.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.IdentityModel.Tokens.Jwt.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Twilio.AspNet.Common.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Twilio.AspNet.Mvc.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Twilio.dll
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\CaptchaMvc.pdb
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\CaptchaMvc.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Microsoft.IdentityModel.Tokens.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Newtonsoft.Json.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\PayPal.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\System.IdentityModel.Tokens.Jwt.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\Twilio.xml
+I:\2019\BuildPower Construction\Build Power App\Build Power App\bin\ru\EntityFramework.SqlServer.resources.dll

@@ -1,0 +1,112 @@
+﻿<div class="modal-content" style="width:900px;     position: absolute; left: -130px;">
+    <div class="modal-header" style="border-bottom:0;    padding-top: 40px; margin-top:-15px;">
+        <h3 style="right: 30px; top: 5px; position: absolute;"><button class="close" data-dismiss="modal" area-hidden="true" style="padding:0;"><i class="material-icons" style="font-size: 36px; color: red; border-color: red; background: antiquewhite; padding:0;">close</i></button></h3>
+
+    </div>
+    <div class="modal-body" style="padding: 10px;
+    padding-top: 0px;">
+
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text card-header-success">
+                    <div class="card-text">
+                        <h4 class="card-title">Add Form</h4>
+                        @if (ViewBag.mess != null)
+                        {
+                          <h4 class="card-title" style="color:red">@ViewBag.mess</h4>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="card-body" style="padding-top:15px">
+
+                    <form action="/Project/AddProject" method="post" enctype = "multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                    <label for="projectname">Project Name</label>
+                                    <input type="text" class="form-control" name="projectname" id="projectname" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="company">Company Name</label>
+                                <input type="text" class="form-control" name="company" id="company" required>
+                            </div>
+                                           
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" rows="4" name="description" id="description" required></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="price">Price</label>
+                                <input type="text" class="form-control" name="price" id="price" required>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" name="location" id="location" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            
+                            <div class="form-group col-md-6">
+                                <label for="website">Company Website</label>
+                                <input type="text" class="form-control" name="website" id="website" required>
+                            </div>
+                        </div>
+
+
+                    
+
+                        <div class="form-row">
+                            <label for="file">Project Image</label>
+                         
+                           <input id="file" type="file" name="file" class="form-control-file" onchange="show(this)" style="margin-bottom: 10px;">
+                         
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                <img id="user_img"
+                                     height="160"
+                                     width="210"
+                                     style="border:solid 1px;
+                                     position: absolute;
+                                    bottom: -50px;
+                                    right: 16px;
+                                    width: 341px;
+                                    height: 178px;
+                                    object-fit: cover;" />
+
+                                <script type="text/javascript">
+
+                           function show(input) {
+                               if (input.files && input.files[0]) {
+                                   var filerdr = new FileReader();
+                                   filerdr.onload = function (e) {
+                                       $('#user_img').attr('src', e.target.result);
+                                   }
+                                   filerdr.readAsDataURL(input.files[0]);
+                               }
+                           }
+                                </script>
+                            </div>
+                        </div>
+
+
+
+                        <button type="submit" class="fadeIn fourth btn btn-success">Add</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+

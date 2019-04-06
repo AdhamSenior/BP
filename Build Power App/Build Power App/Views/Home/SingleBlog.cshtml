@@ -1,0 +1,542 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+
+
+<!-- Page Title
+============================================= -->
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>Blog Single</h1>
+        <ol class="breadcrumb">
+            @*<li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Blog</a></li>*@
+            <li class="breadcrumb-item active" aria-current="page">Blog Single</li>
+        </ol>
+    </div>
+
+</section><!-- #page-title end -->
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <div class="single-post nobottommargin">
+
+                <!-- Single Post
+                ============================================= -->
+                <div class="entry clearfix">
+
+                    <!-- Entry Title
+                    ============================================= -->
+                    <div class="entry-title">
+                        <h2>@ViewBag.news.Title</h2>
+                    </div><!-- .entry-title end -->
+                    <!-- Entry Meta
+                    ============================================= -->
+                    <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3"></i> @ViewBag.news.DateTime</li>
+                        <li><a href="#"><i class="icon-user"></i> @ViewBag.news.AuthorID</a></li>
+                        <li><i class="icon-folder-open"></i> <a href="#">@ViewBag.news.CategoryID</a></li>
+                        <li><a href="#"><i class="icon-comments"></i> @ViewBag.commentcount Comments</a></li>
+                        <li><a href="#"><i class="icon-camera-retro"></i></a></li>
+                    </ul><!-- .entry-meta end -->
+                    <!-- Entry Image
+                    ============================================= -->
+                    <div class="entry-image bottommargin">
+                        <a href="#"><img src="@ViewBag.news.Picture" alt="Blog Single"></a>
+                    </div><!-- .entry-image end -->
+                    <!-- Entry Content
+                    ============================================= -->
+                    <div class="entry-content notopmargin">
+
+                        <p>@ViewBag.news.Description</p>
+
+                       
+
+                      <!-- Post Single - Content End -->
+                        <!-- Tag Cloud
+                        ============================================= -->
+                     
+                        <div class="tagcloud clearfix bottommargin">
+                            @{
+                                foreach (var item in ViewBag.categories)
+                                {
+                                    <a href="/home/blogbyCategory/@item.ID">@item.Name</a>
+                                }
+                            }
+                           
+                          
+                        </div><!-- .tagcloud end -->
+
+                     
+
+                        <!-- Post Single - Share
+                        ============================================= -->
+                        @*<div class="si-share noborder clearfix">
+                            <span>Share this Post:</span>
+                            <div>
+                                <a href="#" class="social-icon si-borderless si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-pinterest">
+                                    <i class="icon-pinterest"></i>
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-email3">
+                                    <i class="icon-email3"></i>
+                                    <i class="icon-email3"></i>
+                                </a>
+                            </div>
+                        </div>*@<!-- Post Single - Share End -->
+
+                    </div>
+                </div><!-- .entry end -->
+                <!-- Post Navigation
+                ============================================= -->
+                @*<div class="post-navigation clearfix">
+
+                    <div class="col_half nobottommargin">
+                        <a href="#">&lArr; This is a Standard post with a Slider Gallery</a>
+                    </div>
+
+                    <div class="col_half col_last tright nobottommargin">
+                        <a href="#">This is an Embedded Audio Post &rArr;</a>
+                    </div>
+
+                </div>*@<!-- .post-navigation end -->
+
+             
+
+                @*<!-- Post Author Info
+                ============================================= -->
+                <div class="card">
+                    <div class="card-header"><strong>Posted by <a href="#">John Doe</a></strong></div>
+                    <div class="card-body">
+                        <div class="author-image">
+                            <img src="images/author/1.jpg" alt="" class="rounded-circle">
+                        </div>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eveniet, eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae blanditiis praesentium vitae ab sint earum voluptate velit beatae alias fugit accusantium laboriosam nisi reiciendis deleniti tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam aliquid. Consectetur, perferendis?
+                    </div>
+                </div><!-- Post Single - Author End -->*@
+
+            
+
+                <h4>Related Posts:</h4>
+
+                <div class="related-posts clearfix">
+
+                    <div class="col_half nobottommargin">
+                        @{
+                            foreach (var item in ViewBag.realetedone)
+                            {
+                                <div class="mpost clearfix">
+                                    <div class="entry-image">
+                                        <a href="/home/singleblog/@item.ID"><img src="@item.Picture" alt="Blog Single"></a>
+                                    </div>
+                                    <div class="entry-c">
+                                        <div class="entry-title">
+                                            <h4><a href="/home/singleblog/@item.ID">@item.Title</a></h4>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><i class="icon-calendar3"></i> @item.DateTime</li>
+                                            @{ 
+                                                int result =0;
+                                                foreach (var comment in ViewBag.allcomments)
+                                                {
+                                                    if(comment.ItemID == item.ID)
+                                                    {
+                                                        result++;
+                                                    }
+                                                }
+                                            }
+                                            <li><a href="/home/singleblog/@item.ID"><i class="icon-comments"></i> @result</a></li>
+                                        </ul>
+                                        <div class="entry-content">
+                                            @{
+                                                string natija = "";
+                                                if (item.Description.Length > 150)
+                                                {
+                                                    natija = item.Description.Substring(0, item.Description.Length / 2);
+                                                }
+                                                else
+                                                {
+                                                    natija = item.Description;
+                                                }
+                                            }
+                                            @natija...
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                     
+                    </div>
+
+             <div class="col_half nobottommargin col_last">
+
+           @{
+                foreach (var item in ViewBag.realetedtwo)
+                {
+                    <div class="mpost clearfix">
+                        <div class="entry-image">
+                            <a href="/home/singleblog/@item.ID"><img src="@item.Picture" alt="Blog Single"></a>
+                        </div>
+                        <div class="entry-c">
+                            <div class="entry-title">
+                                <h4><a href="/home/singleblog/@item.ID">@item.Title</a></h4>
+                            </div>
+                            <ul class="entry-meta clearfix">
+                                <li><i class="icon-calendar3"></i> @item.DateTime</li>
+                                @{
+                                   int result =0;
+                                    foreach (var comment in ViewBag.allcomments)
+                                    {
+                                        if(comment.ItemID == item.ID)
+                                        {
+                                            result++;
+                                        }
+                                    }
+                                }
+                                <li><a href="/home/singleblog/@item.ID"><i class="icon-comments"></i> @result</a></li>
+                            </ul>
+                            <div class="entry-content">
+                                @{
+                                   string  natija = "";
+                                    if (item.Description.Length > 150)
+                                    {
+                                        natija = item.Description.Substring(0, item.Description.Length / 2);
+                                    }
+                                    else
+                                    {
+                                        natija = item.Description;
+                                    }
+                                }
+                                @natija...
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            @*<button id="btnShowModal" type="button"
+                            class="btn btn-sm btn-default pull-left col-lg-11 button button4">
+                         Modals
+                    </button>*@
+
+                            <div class="modal fade login-modal" tabindex="-1" id="loginModal"
+                                 data-keyboard="false" data-backdrop="static" style="height: 700px;">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content" style=" margin-top -20px;">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                x
+                                            </button>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/Home/SubmitComment" method="post" style="margin-bottom: -20px;">
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12" style="padding-left:10px; padding-right:10px">
+                                                       <h2> Author: <span id="authorname"></span>  </h2>
+                                                        <p> <b>Comment:</b>  <span id="messageauthor"></span></p>
+                                                    </div>
+
+                                                    <div class="form-group col-md-12" style="padding-left:10px; padding-right:10px; padding-bottom:15px">
+                                                        <h3>Leave a <span>Comment</span></h3>
+
+                                                 
+
+                                                            <div class="col_one_third" style="width: 49%;margin-right: 20px;">
+                                                                <label for="author">Name</label>
+                                                                <input type="text" name="author" id="author" value="" size="22" tabindex="1" class="sm-form-control" />
+                                                            </div>
+
+                                                            <div class="col_one_third" style="width: 48%; margin-right:0;">
+                                                                <label for="email">Email</label>
+                                                                <input type="text" name="email" id="email" value="" size="22" tabindex="2" class="sm-form-control" />
+                                                            </div>
+
+
+                                                            <div class="clear"></div>
+
+                                                            <div class="col_full">
+                                                                <label for="comment">Comment</label>
+                                                                <textarea name="comment" cols="58" rows="4" tabindex="4" class="sm-form-control"></textarea>
+                                                            </div>
+
+                                                            <div class="col_full nobottommargin">
+                                                                <input type="hidden" id="commentid" name="commentid" />
+                                                                <input type="hidden" name="id" value="@ViewBag.news.ID" />
+                                                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
+                                                            </div>
+
+                                                
+                                                      
+                                                      
+
+
+                                                    </div>
+
+
+
+                                                </div>
+
+
+
+
+
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+                </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+                <script type="text/javascript">
+
+                        $(document).ready(function () {
+                            $(".btnShowModal").on('click', function () {
+
+
+                                var id = $(this).attr('data-id');
+                                $('#loginModal #commentid').val(id);
+
+                                var title = $(this).attr('data-title');
+                                $('#loginModal #authorname').text(title);
+
+
+                                var price = $(this).attr('data-price');
+                                $('#loginModal #messageauthor').text(price);
+
+
+                                $("#loginModal").modal('show');
+                            });
+
+                            $(".btnHideModal").on('click', function () {
+                                $("#loginModal").modal('hide');
+                            });
+                        });
+                </script>
+
+             
+                <!-- Comments
+                ============================================= -->
+                <div id="comments" class="clearfix">
+
+                    <h3 id="comments-title"><span>@ViewBag.commentcount</span> Comments</h3>
+
+                    <!-- Comments List
+                    ============================================= -->
+              
+                    <ol class="commentlist clearfix">
+
+                        <li class="comment even thread-even depth-1" id="li-comment-1">
+                            @{
+                                foreach (var item in ViewBag.comments)
+                                {
+
+                            
+                            <div id="comment-1" class="comment-wrap clearfix" style="margin-bottom:25px">
+
+                                <div class="comment-meta">
+
+                                    <div class="comment-author vcard">
+
+                                        <span class="comment-avatar clearfix">
+                                            <img alt='' src='~/Content/author.png' class='avatar avatar-60 photo avatar-default' height='60' width='60' />
+                                        </span>
+
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="comment-content clearfix">
+
+                                    <div class="comment-author">@item.Name<span><a href="#" title="Permalink to this comment">@item.DateTime</a></span></div>
+
+                                    <p>@item.Comment</p>
+
+                                    <a class='comment-reply-link btnShowModal' data-id="@item.ID" data-title="@item.Name" data-price="@item.Comment"><i class="icon-reply" href=""></i></a>
+
+
+                                </div>
+
+                                <div class="clear"></div>
+
+                            </div>
+
+
+
+                            <ul class='children' style="margin-bottom:20px">
+                                @{
+                                    var comment = new Review();
+                                    foreach (var child in ViewBag.childcomments)
+                                    {
+                                        if (item.ID == child.ParentID)
+                                        {
+                                            <li class="comment byuser comment-author-_smcl_admin odd alt depth-2" id="li-comment-3">
+
+                                                <div id="comment-3" class="comment-wrap clearfix">
+
+                                                    <div class="comment-meta">
+
+                                                        <div class="comment-author vcard">
+
+                                                            <span class="comment-avatar clearfix">
+                                                                <img alt='' src='http://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' />
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="comment-content clearfix">
+
+                                                        <div class="comment-author"><a href='#' rel='external nofollow' class='url'>@child.Name</a><span><a href="#" title="Permalink to this comment">@child.DateTime</a></span></div>
+
+                                                        <p>@child.Comment</p>
+
+                                                        @*<a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>*@
+
+                                                    </div>
+
+                                                    <div class="clear"></div>
+
+                                                </div>
+
+                                            </li>
+                                        }
+                                    }
+                                }
+                            
+
+                            </ul>
+                                }
+                            }
+                        </li>
+
+                        @*<li class="comment byuser comment-author-_smcl_admin even thread-odd thread-alt depth-1" id="li-comment-2">
+
+                            <div id="comment-2" class="comment-wrap clearfix">
+
+                                <div class="comment-meta">
+
+                                    <div class="comment-author vcard">
+
+                                        <span class="comment-avatar clearfix">
+                                            <img alt='' src='http://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' />
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="comment-content clearfix">
+
+                                    <div class="comment-author"><a href='http://themeforest.net/user/semicolonweb' rel='external nofollow' class='url'>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
+
+                                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+                                    <a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
+
+                                </div>
+
+                                <div class="clear"></div>
+
+                            </div>
+
+                        </li>*@
+
+                    </ol><!-- .commentlist end -->
+
+                    <div class="clear"></div>
+
+                    <!-- Comment Form
+                    ============================================= -->
+                    <div id="respond" class="clearfix">
+
+                        <h3>Leave a <span>Comment</span></h3>
+
+                        <form class="clearfix" method="post" id="commentform" action="@Url.Action("SubmitComment", "Home")">
+
+                            <div class="col_one_third" style="width: 42%;
+    margin-right: 45px;">
+                                <label for="author">Name</label>
+                                <input type="text" name="author" id="author" value="" size="22" tabindex="1" class="sm-form-control" />
+                            </div>
+
+                            <div class="col_one_third" style="width: 54%;
+    margin-right: -1px;">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" value="" size="22" tabindex="2" class="sm-form-control" />
+                            </div>
+
+
+                            <div class="clear"></div>
+
+                            <div class="col_full">
+                                <label for="comment">Comment</label>
+                                <textarea name="comment" cols="58" rows="7" tabindex="4" class="sm-form-control"></textarea>
+                            </div>
+
+                            <div class="col_full nobottommargin">
+                                <input type="hidden" id="commentid" name="commentid"  value="0"/>
+                                <input  type="hidden" name="id" value="@ViewBag.news.ID"/>
+                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
+                            </div>
+
+                        </form>
+
+                    </div><!-- #respond end -->
+
+                </div><!-- #comments end -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- #content end -->

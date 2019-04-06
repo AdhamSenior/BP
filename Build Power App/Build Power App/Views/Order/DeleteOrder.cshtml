@@ -1,0 +1,136 @@
+﻿ @{
+    Layout = null;
+}
+<div class="modal-content" style="width:900px; position: absolute; left: -130px;  overflow-y: auto;">
+    <div class="modal-header" style="border-bottom:0;    padding-top: 40px; margin-top:-15px;">
+        <h3 style="right: 30px; top: 5px; position: absolute;"><button class="close" data-dismiss="modal" area-hidden="true" style="padding:0;"><i class="material-icons" style="font-size: 36px; color: red; border-color: red; background: antiquewhite; padding:0;">close</i></button></h3>
+
+    </div>
+    <div class="modal-body" style="padding: 10px;
+    padding-top: 0px;   overflow-y: auto !important;">
+
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text card-header-danger">
+                    <div class="card-text">
+                        <h5 class="card-title">Delete Form </h5>
+                    </div>
+                </div>
+                <div class="card-body" style="padding-top:15px">
+
+                    <div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        Product Name
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.product.Name
+                                    </dd>
+
+                                    <dt>
+                                        Quantity
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.order.Quantity
+                                    </dd>
+
+                                    <dt>
+                                        Order Number
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.order.OrderNumber
+                                    </dd>
+
+                                    <dt>
+                                        Order Date
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.order.OrderDate
+                                    </dd>
+                                    <dt>
+                                        Total Price
+                                    </dt>
+
+                                    <dd>
+                                        $@ViewBag.order.TotalPrice,2)
+                                    </dd>
+                                    <dt>
+                                        Status
+                                    </dt>
+                                    @{
+                                        string natija = (ViewBag.order.Status == 1) ? "Draft" : (ViewBag.order.Status == 2) ? "Paid" : "Delivered";
+
+                                    }
+                                    <dd>
+                                        @natija
+                                    </dd>
+
+                                </dl>
+                            </div>
+                            <div class="form-group col-md-6">
+
+                                <dl class="dl-horizontal">
+
+                                    <dt>
+                                        Client
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.clientname
+                                    </dd>
+
+                                    <dt>
+                                        Phone number
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.phonenumber
+                                    </dd>
+
+                                    <dt>
+                                        Picture
+                                    </dt>
+
+                                    <dd>
+
+                                        <img src="@Url.Content(ViewBag.product.Picture)" style="width:400px; height:250px;  object-fit: contain;" alt="" />
+                                    </dd>
+
+
+
+                                </dl>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <form style="margin-top: -80px;" method="post" action="@Url.Action("DeleteOrderr","order")">
+                            <input type="hidden" class="fadeIn fourth btn btn-success" name="id" value="@ViewBag.order.ID">
+                            <input type="submit" class="fadeIn fourth btn btn-success" data-dismiss="modal" area-hidden="true" id="show_first" value="Close">
+                            <input type="submit" class="fadeIn fourth btn btn-danger" value="Delete">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+

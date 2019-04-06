@@ -1,0 +1,396 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+
+<!-- Content
+============================================= -->
+<section id="content">
+    @*<section id="page-title" class="">
+
+            <div class="container clearfix">
+                <h1>Carrers</h1>
+                <span>A Short Page Title Tagline</span>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Carrers</li>
+                </ol>
+            </div>
+
+        </section>*@<!-- #page-title end-->
+    <!-- Content
+    ============================================= -->
+    <section id="content">
+
+
+        @{
+            if (Build_Power_App.App_Start.Control.isRu != true)
+            {
+
+                <div class="content-wrap">
+
+                    <div class="container clearfix">
+
+                        <div class="row clearfix center divcenter" style="max-width: 960px;">
+                            <div class="col-lg-12">
+                                <div class="heading-block center">
+                                    <h3> Warranty period</h3>
+                                    <span>- this is the period during which the client, having discovered a lack of goods, has the right to require the seller or manufacturer to take measures to eliminate the defect. The seller must remedy the shortcomings if it is not proved that they arose due to violations by the buyer of the rules of use.</span>
+                                </div>
+                                @*<div id="faqs-list">
+                                        <div class="row align-items-stretch grid-border clearfix">
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-building-crane"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Boat Builders and Shipwright</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-barrow"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Equipment Operators</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-realtor"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Laborers &amp; Helpers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-light-bulb"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Electricians and Floor Layer</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-trowel"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Elevator Installers and Repairers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-drill"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Insulation Workers and Helpers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-high-voltage"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Iron Workers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-plan3"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Planners and Masonry Workers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-pipe-wrench"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Plumbers &amp; Pipefitters</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-fence"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Building Inspector &amp; Carpenter</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-construction-helmet"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Superintendent</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-bricks"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Dry Wall Finisher &amp; Installer</h3></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button button-3d topmargin">Browse More Categories</div>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="line" style="margin-top:10px; margin-bottom:20px;"></div>
+
+                    <div class="container clearfix">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+
+
+
+
+                                <h3><strong class="color">Q.</strong> Rules of exchange and return of goods:</h3>
+                                <p>
+                                    Exchange and return of products of inadequate quality
+                                    The seller guarantees that the buyer within 7 days from the date of purchase of the goods may refuse the goods of inadequate quality if:
+                                    • the goods were not used and have initial condition, is in the package with all labels, and there are documents for the purchase of goods;
+                                    • The product is not included in the list of products of good quality, not subject to return and exchange. The buyer has the right to exchange a good quality product for another commercial offer of this product or another product identical in value or another product with an additional charge or return of the price difference.
+
+                                </p>
+
+                                <h3><strong class="color">Q.</strong> Exchange and return of products of inadequate quality</h3>
+                                <p>
+                                    If the buyer finds a defect in the product after purchasing it, then he may request a replacement from the seller. Replacement must be made within 7 days from the date of the request.
+                                    Technically complex products of inadequate quality are replaced with goods of the same brand or with similar goods of another brand with cost of recalculation. Return is made by cancelling the contract of sale and return the value of the goods.
+
+                                </p>
+
+
+
+
+                            </div>
+
+                            <div class="col-lg-6">
+
+
+
+
+                                <h3><strong class="color">Q.</strong> Refund</h3>
+                                <p>
+                                    In case of payment with cash, a refund is made at the cash desk no later than 10 days after the buyer presents a claim for refund.
+                                    Transaction of the cost of goods to the customer’s card, if the payment was accomplished with a card, occurs no later than 15 banking days after the buyer presents a claim for refund.
+                                    When electronic payment system was used, the refund is made to an electronic account within 15 banking days.
+
+                                </p>
+                                <h3><strong class="color">Q.</strong> When does the warranty start?</h3>
+                                <p>•	from the moment of transfer of goods to the consumer, from the day of delivery</p>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    @*<a href="icons.html" class="button button-3d nobottomborder button-full center tright t300 font-primary topmargin footer-stick" style="font-size: 26px;">
+                            <div class="container clearfix">
+                                Check out our new Construction related Font Icons? <strong>Check Now</strong> <i class="icon-angle-right" style="top:3px;"></i>
+                            </div>
+                        </a>*@
+
+                </div>
+
+
+            }
+            else
+            {
+
+                <div class="content-wrap">
+
+                    <div class="container clearfix">
+
+                        <div class="row clearfix center divcenter" style="max-width: 960px;">
+                            <div class="col-lg-12">
+                                <div class="heading-block center">
+                                    <h3> Гарантийный период</h3>
+                                    <span>– это срок, во время которого клиент, обнаружив недостаток товара имеет право потребовать от продавца или изготовителя принять меры по устранению дефекта. Продавец должен устранить недостатки, если не будет доказано, что они возникли вследствие нарушений покупателем правил эксплуатации.</span>
+                                </div>
+                                @*<div id="faqs-list">
+                                        <div class="row align-items-stretch grid-border clearfix">
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-building-crane"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Boat Builders and Shipwright</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-barrow"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Equipment Operators</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-realtor"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Laborers &amp; Helpers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-light-bulb"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Electricians and Floor Layer</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-trowel"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Elevator Installers and Repairers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-drill"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Insulation Workers and Helpers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-high-voltage"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Iron Workers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-plan3"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Planners and Masonry Workers</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-pipe-wrench"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Plumbers &amp; Pipefitters</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-fence"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Building Inspector &amp; Carpenter</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-construction-helmet"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Construction Superintendent</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
+                                                    <div class="fbox-icon">
+                                                        <i class="icon-realestate-bricks"></i>
+                                                    </div>
+                                                    <a href="#"><h3>Dry Wall Finisher &amp; Installer</h3></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button button-3d topmargin">Browse More Categories</div>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="line" style="margin-top:10px; margin-bottom:20px;"></div>
+
+                    <div class="container clearfix">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+
+
+
+
+                                <h3><strong class="color">Q.</strong> Правила обмена и возврата товара:</h3>
+                                <p>
+                                    Продавец гарантирует, что покупатель в течение 7 дней с момента приобретения товара может отказаться от товара ненадлежащего качества, если:
+                                    •	товар не поступал в эксплуатацию и имеет товарный вид, находится в упаковке со всеми ярлыками, а также есть документы на приобретение товара;
+                                    •	товар не входит в перечень продуктов надлежащего качества, не подлежащих возврату и обмену. Покупатель имеет право обменять товар надлежащего качество на другое торговое предложение этого товара или другой товар, идентичный по стоимости или на иной товар с доплатой или возвратом разницы в цене.
+                                </p>
+
+                                <h3><strong class="color">Q.</strong> Обмен и возврат продукции ненадлежащего качества</h3>
+                                <p>
+                                    Если покупатель обнаружил недостатки товара после его приобретения, то он может потребовать замену у продавца. Замена должна быть произведена в течение 7 дней со дня предъявления требования.
+
+                                    Технически сложные товары ненадлежащего качества заменяются товарами той же марки или на аналогичный товар другой марки с перерасчётом стоимости. Возврат производится путем аннулирования договора купли-продажи и возврата суммы в размере стоимости товара.
+                                </p>
+
+
+
+
+                            </div>
+
+                            <div class="col-lg-6">
+
+
+
+
+                                <h3><strong class="color">Q.</strong> Возврат денежных средств</h3>
+                                <p>
+                                    Срок возврата денежных средств зависит от вида оплаты, который изначально выбрал покупатель.
+
+                                    При наличном расчете возврат денежных средств осуществляется на кассе не позднее чем, через 10 дней после предъявления покупателем требования о возврате.
+
+                                    Зачисление стоимости товара на карту клиента, если был использован безналичный расчёт, происходит не позднее 15 банковских дней после предъявления покупателем требования о возврате.
+
+                                    При использовании электронных платёжных систем, возврат осуществляется на электронный счёт в течение 15 банковских дней.
+                                </p>
+                                <h3><strong class="color">Q.</strong> С какого момента начинается гарантия?</h3>
+                                <p>•	с момента передачи товара потребителю, со дня доставки</p>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    @*<a href="icons.html" class="button button-3d nobottomborder button-full center tright t300 font-primary topmargin footer-stick" style="font-size: 26px;">
+                            <div class="container clearfix">
+                                Check out our new Construction related Font Icons? <strong>Check Now</strong> <i class="icon-angle-right" style="top:3px;"></i>
+                            </div>
+                        </a>*@
+
+                </div>
+
+
+            }
+
+
+        }
+
+    </section><!-- #content end -->
+</section><!-- #page-title end -->

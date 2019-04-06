@@ -1,0 +1,225 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+
+@{
+    if (Build_Power_App.App_Start.Control.isRu == true)
+    {
+        <div class="section header-stick" style="margin-top:0px !important; margin-bottom:0px;">
+            <h2 class="center nobottommargin ls1">Наш контакт</h2>
+        </div>
+        <script type="text/javascript"
+                src="http://code.jquery.com/jquery-latest.js">
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#bbbb').click(function () {
+                setTimeout(function () { location.reload(); }, 5000);
+                location.reload();
+            });
+        });
+        </script>
+
+
+        <img src="~/Content/BP/additional-assets/mappp.png" style="width: 100%;
+    object-fit: contain;
+    height: 345px; ">
+
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <!-- Postcontent
+                    ============================================= -->
+                    <div class="postcontent nobottommargin">
+
+                        @{
+                            if (ViewBag.info != null && ViewBag.info != "")
+                            {  <h3>@ViewBag.info</h3>}
+                        }<h3>Отправить нам письмо</h3>
+
+                        <div class="form-widget">
+
+
+
+                            <form class="nobottommargin" action="@Url.Action("Contact", "Home")" id="template-contactform" name="template-contactform" method="post">
+
+                                <div class="form-process"></div>
+
+                                <div class="col_one_third">
+                                    <label for="template-contactform-name">имя <small>*</small></label>
+                                    <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" />
+                                </div>
+
+                                <div class="col_one_third">
+                                    <label for="template-contactform-email">Эл. адрес <small>*</small></label>
+                                    <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" />
+                                </div>
+
+                                <div class="col_one_third col_last">
+                                    <label for="template-contactform-phone">Телефон</label>
+                                    <input type="text" id="template-contactform-phone" name="phone" value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="col_three_third" style="margin-bottom:25px">
+                                    <label for="template-contactform-subject">Предмет <small>*</small></label>
+                                    <input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control" />
+                                </div>
+
+
+
+                                <div class="clear"></div>
+
+                                <div class="col_full">
+                                    <label for="template-contactform-message">Сообщение <small>*</small></label>
+                                    <textarea class="required sm-form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
+                                </div>
+
+                                <div class="col_full hidden">
+                                    <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="col_full">
+                                    <button class="button button-3d nomargin" type="submit" id="bbbb" name="template-contactform-submit" value="submit">Send Message</button>
+
+                                </div>
+
+                                <input type="hidden" name="prefix" value="template-contactform-">
+
+
+                            </form>
+                        </div>
+
+                    </div><!-- .postcontent end -->
+
+
+                </div>
+
+
+            </div>
+
+        </section><!-- #content end -->
+
+
+
+                            }
+                            else
+                            {
+        <div class="section header-stick" style="margin-top:0px !important; margin-bottom:0px;">
+            <h2 class="center nobottommargin ls1">Our Contact</h2>
+        </div>
+        <script type="text/javascript"
+                src="http://code.jquery.com/jquery-latest.js">
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#bbbb').click(function () {
+                setTimeout(function () { location.reload(); }, 5000);
+                location.reload();
+            });
+        });
+        </script>
+
+
+        <img src="~/Content/BP/additional-assets/mappp.png" style="width: 100%;
+    object-fit: contain;
+    height: 345px; ">
+
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <!-- Postcontent
+                    ============================================= -->
+                    <div class="postcontent nobottommargin">
+
+                        @{
+                            if (ViewBag.info != null && ViewBag.info != "")
+                            {  <h3>@ViewBag.info</h3>}
+                        }<h3>Send us an Email</h3>
+
+                        <div class="form-widget">
+
+
+
+                            <form class="nobottommargin" action="@Url.Action("Contact", "Home")" id="template-contactform" name="template-contactform" method="post">
+
+                                <div class="form-process"></div>
+
+                                <div class="col_one_third">
+                                    <label for="template-contactform-name">Name <small>*</small></label>
+                                    <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" />
+                                </div>
+
+                                <div class="col_one_third">
+                                    <label for="template-contactform-email">Email <small>*</small></label>
+                                    <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" />
+                                </div>
+
+                                <div class="col_one_third col_last">
+                                    <label for="template-contactform-phone">Phone</label>
+                                    <input type="text" id="template-contactform-phone" name="phone" value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="col_three_third" style="margin-bottom:25px">
+                                    <label for="template-contactform-subject">Subject <small>*</small></label>
+                                    <input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control" />
+                                </div>
+
+
+
+                                <div class="clear"></div>
+
+                                <div class="col_full">
+                                    <label for="template-contactform-message">Message <small>*</small></label>
+                                    <textarea class="required sm-form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
+                                </div>
+
+                                <div class="col_full hidden">
+                                    <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="col_full">
+                                    <button class="button button-3d nomargin" type="submit" id="bbbb" name="template-contactform-submit" value="submit">Send Message</button>
+
+                                </div>
+
+                                <input type="hidden" name="prefix" value="template-contactform-">
+
+
+                            </form>
+                        </div>
+
+                    </div><!-- .postcontent end -->
+
+
+                </div>
+
+
+            </div>
+
+        </section><!-- #content end -->
+
+
+
+                            }
+}
+
